@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request, HTTPException, Depends
 from sqlmodel import create_engine
 from sqlalchemy.engine.base import Engine
 
-from src.adapters.responses import MappingResponse, MappingResponseList
+from src.adapters.responses import MappingResponse, MappingResponseList, HTTPError
 from src.service_layer import services
 from src.service_layer.unit_of_work import SQLAlchemyUnitOfWork
 from src.domain.tfidfmapping import StringNotFound
@@ -35,7 +35,7 @@ async def add_response_header(request: Request, call_next):
 
 
 @app.get('/data-fields/business-terms/one',
-         response_model=MappingResponse,
+         responses={200: {"model": MappingResponse}, 404: {"model": HTTPError}},
          summary="Data fields vs Business terms mapping - ONE",
          tags=["Data fields vs. Business terms"])
 def data_fields_business_terms_one(database: str, schema: str, data_field: str,
@@ -68,7 +68,7 @@ def data_fields_business_terms_all(database: str, schema: str, engine=Depends(ge
 
 
 @app.get('/data-structures/entities/one',
-         response_model=MappingResponse,
+         responses={200: {"model": MappingResponse}, 404: {"model": HTTPError}},
          summary="Data structures vs Entities mapping - ONE",
          tags=["Data structures vs. Entities"])
 def data_structures_entities_one(database: str, schema: str, data_structure: str,

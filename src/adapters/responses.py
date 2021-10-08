@@ -7,6 +7,15 @@ from pydantic import BaseModel
 from src.domain.tfidfmapping import TfidfDistanceMapping
 
 
+class HTTPError(BaseModel):
+    detail: str
+
+    class Config:
+        schema_extra = {
+            "example": {"detail": "Input string does not exist"},
+        }
+
+
 class MappingResult(BaseModel):
     input_string: str
     match_strings: List[str]
