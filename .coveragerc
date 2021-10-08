@@ -1,0 +1,19 @@
+[report]
+exclude_lines =
+    pragma: no cover
+    @abstract
+    def __repr__
+    if self\.debug
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:
+
+[run]
+source =
+    ./src
+
+omit =
+    ./src/utils/*
+    ./src/nbconfig.py
+    ./src/textmapping.py

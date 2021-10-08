@@ -1,0 +1,15 @@
+version: "3.8"
+services: 
+  mappings_api:
+    image: mapping_api
+    build: .
+    container_name: mapping_api
+    environment: 
+      - PYTHONDONTWRITEBYTECODE=1
+      - LD_LIBRARY_PATH=/opt/oracle/instantclient_21_1
+    env_file: .env
+    ports:
+      - "80:80"
+    stdin_open: true
+    tty: true
+      

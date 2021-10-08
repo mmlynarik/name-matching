@@ -1,0 +1,4 @@
+https://medium.com/wbaa/https-medium-com-ingwbaa-boosting-selection-of-the-most-similar-entities-in-large-scale-datasets-450b3242e618
+https://www.slideshare.net/godatadriven/pydata-amsterdam-name-matching-at-scale
+https://godatadriven.com/blog/pydata-amsterdam-meetup-may-2016/
+https://towardsdatascience.com/surprisingly-effective-way-to-name-matching-in-python-1a67328e670e
