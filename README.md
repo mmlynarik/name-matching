@@ -67,7 +67,7 @@ Launch test suite using `pytest` and `coverage`. The prerequisite is the ACCURIT
 $ make test
 ```
 
-For data science development, run Jupyter Lab and open the notebooks in `notebooks/`:
+For data science development, run Jupyter Lab and open the notebooks in `notebooks/`: 
 
 ```bash
 $ jupyter lab
