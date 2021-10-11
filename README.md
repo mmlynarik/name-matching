@@ -1,4 +1,4 @@
-Accurity Automated Mappings Data Science Project
+Automated string matching/mappings data science project
 ==============================
 
 Project Organization
