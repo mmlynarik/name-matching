@@ -6,6 +6,7 @@ from sqlalchemy.engine.base import Engine
 
 from src.adapters.responses import MappingResponse, MappingResponseList
 from src.service_layer import services
+from src.service_layer.unit_of_work import SQLAlchemyUnitOfWork
 from src.domain.tfidfmapping import StringNotFound
 from src.config import settings
 
@@ -22,12 +23,6 @@ app = FastAPI(title=title, description=description, docs_url="/")
 
 def get_engine(database: str) -> Engine:
     return create_engine(url=settings.ACCURITY_PROD_DB_SERVER_URI + "/" + database, echo=True)
-
-
-if settings.DATABASE_TYPE == "POSTGRES":
-    from src.service_layer.unit_of_work import PostgresUnitOfWork as UnitOfWork
-else:
-    from src.service_layer.unit_of_work import LegacyUnitOfWork as UnitOfWork
 
 
 @app.middleware("http")
@@ -50,7 +45,7 @@ def data_fields_business_terms_one(database: str, schema: str, data_field: str,
         model = services.map_data_fields_business_terms_one(
             data_field=data_field,
             ntop=ntop,
-            uow=UnitOfWork(engine=engine, exec_dict=exec_dict)
+            uow=SQLAlchemyUnitOfWork(engine=engine, exec_dict=exec_dict)
         )
     except StringNotFound as e:
         raise HTTPException(status_code=404, detail=str(e))
@@ -67,7 +62,7 @@ def data_fields_business_terms_all(database: str, schema: str, engine=Depends(ge
     exec_dict = {"schema_translate_map": {"schema": schema}}
     model = services.map_data_fields_business_terms_all(
         ntop=ntop,
-        uow=UnitOfWork(engine=engine, exec_dict=exec_dict)
+        uow=SQLAlchemyUnitOfWork(engine=engine, exec_dict=exec_dict)
     )
     return MappingResponseList.from_model(model=model)
 
@@ -83,7 +78,7 @@ def data_structures_entities_one(database: str, schema: str, data_structure: str
         model = services.map_data_structures_entities_one(
             data_structure=data_structure,
             ntop=ntop,
-            uow=UnitOfWork(engine=engine, exec_dict=exec_dict)
+            uow=SQLAlchemyUnitOfWork(engine=engine, exec_dict=exec_dict)
         )
     except StringNotFound as e:
         raise HTTPException(status_code=404, detail=str(e))
@@ -100,6 +95,6 @@ def data_structures_entities_all(database: str, schema: str, engine=Depends(get_
     exec_dict = {"schema_translate_map": {"schema": schema}}
     model = services.map_data_structures_entities_all(
         ntop=ntop,
-        uow=UnitOfWork(engine=engine, exec_dict=exec_dict)
+        uow=SQLAlchemyUnitOfWork(engine=engine, exec_dict=exec_dict)
     )
     return MappingResponseList.from_model(model=model)
