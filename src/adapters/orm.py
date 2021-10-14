@@ -1,4 +1,4 @@
-# Legacy SQLModel ORM
+# SQLModel ORM
 
 from sqlmodel import Field, SQLModel
 
