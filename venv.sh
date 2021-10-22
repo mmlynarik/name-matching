@@ -1,7 +1,6 @@
-pip3 install --user virtualenv
-virtualenv .venv
+python3 -m venv .venv
 echo "set -a && . .env && set +a" >> .venv/bin/activate
 source .venv/bin/activate
-pip3 install --upgrade pip
-pip3 install -r requirements.txt
-pip3 install -e .
+pip install --upgrade pip
+pip install -r requirements.txt
+pip install -e .
