@@ -39,6 +39,26 @@ Project Organization
 Set up
 ------------
 
+Get the Ubuntu 20.04 running in WSL2:
+
+```bash
+sudo apt update
+sudo apt upgrade
+
+sudo apt install python3.9
+sudo apt install python3.9-venv
+sudo apt install python3.9-dev
+sudo apt install python-is-python3
+sudo apt install --reinstall build-essential
+sudo apt install libgmp-dev portaudio19-dev libssl-dev python3-dev
+sudo apt install gcc
+ssh-keygen -t rsa -b 4096 -C "email@address"
+# copy SSH public key to your github account
+git clone git@github.com:mmlynarik/name-matching.git
+```
+
+
+
 Install the virtual environment, activate it and install all dependencies:
 
 ```bash
