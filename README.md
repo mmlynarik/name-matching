@@ -39,22 +39,32 @@ Project Organization
 Set up
 ------------
 
-Get the Ubuntu 20.04 running in WSL2:
+Install Python 3.9, generate SSH keys for GitHub, clone repository and set up VSCode remote server in Ubuntu running in WSL2:
 
 ```bash
+mkdir python
+cd python
+
 sudo apt update
 sudo apt upgrade
 
-sudo apt install python3.9
-sudo apt install python3.9-venv
-sudo apt install python3.9-dev
-sudo apt install python-is-python3
-sudo apt install --reinstall build-essential
-sudo apt install libgmp-dev portaudio19-dev libssl-dev python3-dev
-sudo apt install gcc
-ssh-keygen -t rsa -b 4096 -C "email@address"
+sudo apt install -y python3.9
+sudo apt install -y python3.9-venv
+sudo apt install -y python3.9-dev
+sudo apt install -y python-is-python3
+sudo apt install -y --reinstall build-essential
+sudo apt install -y libgmp-dev portaudio19-dev libssl-dev python3-dev
+sudo apt install -y gcc
+
+ssh-keygen -t rsa -b 4096 -C "name.surname@gmail.com"
 # copy SSH public key to your github account
+
+git config --global user.name "Name Surname"
+git config --global user.email "name.surname@gmail.com"
 git clone git@github.com:mmlynarik/name-matching.git
+
+cd name-matching/
+code .
 ```
 
 
