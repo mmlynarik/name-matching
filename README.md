@@ -52,7 +52,7 @@ mkdir python
 cd python
 
 sudo apt update
-sudo apt upgrade
+sudo apt -y upgrade
 
 sudo apt install -y python3.9
 sudo apt install -y python3.9-venv
@@ -60,7 +60,6 @@ sudo apt install -y python3.9-dev
 sudo apt install -y python-is-python3
 sudo apt install -y --reinstall build-essential
 sudo apt install -y libgmp-dev portaudio19-dev libssl-dev python3-dev
-sudo apt install -y gcc
 
 ssh-keygen -t rsa -b 4096 -C "name.surname@gmail.com"
 # copy SSH public key to your github account
