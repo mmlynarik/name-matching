@@ -60,6 +60,7 @@ sudo apt install -y python3.9-dev
 sudo apt install -y python-is-python3
 sudo apt install -y --reinstall build-essential
 sudo apt install -y libgmp-dev portaudio19-dev libssl-dev python3-dev
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3.9 -
 
 ssh-keygen -t rsa -b 4096 -C "name.surname@gmail.com"
 # copy SSH public key to your github account
