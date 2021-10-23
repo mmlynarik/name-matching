@@ -39,8 +39,14 @@ Project Organization
 Set up
 ------------
 
-Install Python 3.9, generate SSH keys for GitHub, clone repository and set up VSCode remote server in Ubuntu running in WSL2:
+Run these commands in Windows Powershell to install Ubuntu in WSL:
 
+```powershell
+Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
+Add-AppxPackage Ubuntu.appx
+```
+
+Run these commands in Ubuntu shell to install Python 3.9, generate SSH keys for GitHub, clone repository and set up VSCode remote server:
 ```bash
 mkdir python
 cd python
