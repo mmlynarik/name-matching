@@ -73,14 +73,6 @@ cd name-matching/
 code .
 ```
 
-
-
-Install the virtual environment, activate it and install all dependencies:
-
-```bash
-$ source venv.sh
-```
-
 Define environment variables into `.env` file. Currently, the application requires these environment variables:
 
 - ACCURITY_PROD_DB_SERVER_URI (see [SQLAlchemy engines documentation](https://docs.sqlalchemy.org/en/14/core/engines.html#postgresql) 
@@ -89,6 +81,13 @@ for details how to define it)
 
 ```bash
 $ make env
+```
+
+
+Install the virtual environment, activate it and install all dependencies:
+
+```bash
+$ source venv.sh
 ```
 
 Run the `FastAPI` application using `uvicorn` server:
