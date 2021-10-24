@@ -26,6 +26,7 @@ python-dotenv = "0.19.0"
 requests = "2.26.0"
 uvicorn = "0.15.0"
 matplotlib = "^3.4.3"
+jupyterlab = "^3.2.1"
 
 [tool.poetry.dev-dependencies]
 pycodestyle = "^2.8.0"
