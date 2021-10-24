@@ -9,7 +9,7 @@ services:
       - LD_LIBRARY_PATH=/opt/oracle/instantclient_21_1
     env_file: .env
     ports:
-      - "80:80"
+      - "8000:8000"
     stdin_open: true
     tty: true
       
