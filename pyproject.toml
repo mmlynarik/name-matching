@@ -2,7 +2,7 @@
 name = "name-matching"
 version = "0.1.0"
 description = "Naming matching"
-authors = ["Miroslav Mlynarik <mmlynarik@sk.uss.com>"]
+authors = ["Miroslav Mlynarik <miroslav.mlynarik@gmail.com>"]
 packages = [{ include = "src"}]
 
 [tool.poetry.dependencies]
