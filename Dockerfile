@@ -1,4 +1,4 @@
-FROM python:3.8.5
+FROM python:3.9.5
 
 WORKDIR /app
 
@@ -21,4 +21,4 @@ RUN pip install -e .
 
 EXPOSE 80
 
-CMD uvicorn src.app.main:app --host 0.0.0.0 --port 80
+CMD uvicorn src.entrypoints.fastapi:app --host 0.0.0.0 --port 80
