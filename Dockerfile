@@ -21,4 +21,4 @@ RUN pip install -e .
 
 EXPOSE 8000
 
-ENTRYPOINT ["/bin/bash", "-c", "uvicorn src.entrypoints.fastapi:app --host 0.0.0.0 --port 8000"]
+ENTRYPOINT ["uvicorn", "src.entrypoints.fastapi:app", "--host", "0.0.0.0", "--port", "8000"]
