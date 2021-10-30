@@ -27,6 +27,7 @@ requests = "2.26.0"
 uvicorn = "0.15.0"
 matplotlib = "^3.4.3"
 jupyterlab = "^3.2.1"
+statsmodels = "^0.13.0"
 
 [tool.poetry.dev-dependencies]
 pycodestyle = "^2.8.0"
