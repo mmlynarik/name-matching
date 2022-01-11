@@ -62,8 +62,10 @@ sudo apt install -y --reinstall build-essential
 sudo apt install -y libgmp-dev portaudio19-dev libssl-dev python3-dev
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3.9 -
 
+echo export PATH=\"\$HOME/.poetry/bin:\$PATH\" >> ~/.bashrc
 echo alias cl=clear >> ~/.bashrc
 echo alias jl=\"jupyter lab --no-browser --port 8888 --ip=\'127.0.0.1\' --ContentManager.allow_hidden=True --ServerApp.token=\'\' --ServerApp.password=\'\'\" >> ~/.bashrc
+
 
 ssh-keygen -t rsa -b 4096 -C "name.surname@gmail.com"
 # copy SSH public key to your github account
