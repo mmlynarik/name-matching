@@ -71,9 +71,11 @@ Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBas
 Add-AppxPackage Ubuntu.appx
 ```
 
-### 6. Open Ubuntu from Start menu and let it install itself
+### 6. Initial Ubuntu run
+Click Ubuntu icon from Windows Start menu and let it configure itself
 
-Run these commands in Ubuntu shell to install Python 3.9, generate SSH keys for GitHub, clone repository and set up VSCode remote server:
+### 7. Install packages in Ubuntu
+In Ubuntu shell, run these commands to install Python 3.9, generate SSH keys for GitHub, clone repository and set up VSCode remote server:
 ```bash
 mkdir python
 cd python
