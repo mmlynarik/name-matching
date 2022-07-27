@@ -39,11 +39,18 @@ Project Organization
 Set up
 ------------
 
-Install the following apps:
-- Mozzila
-- Git
-- VSCode
-- Docker Desktop
+Install the following apps in Windows:
+```
+Mozzila
+Git
+VSCode
+Docker Desktop
+```
+
+Install WSL & Ubuntu:
+```
+Go to Settings -> Apps -> Programs and Features (Related Settings on the right) -> Turn Windows features on & off
+```
 
 Run these commands in Windows Powershell to install Ubuntu in WSL:
 
