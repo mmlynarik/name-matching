@@ -47,7 +47,7 @@ VSCode
 Docker Desktop
 ```
 
-In Powershell, run as Administrator:
+In Windows Powershell, run as Administrator:
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
