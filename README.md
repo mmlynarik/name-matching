@@ -45,6 +45,7 @@ Mozzila
 Git
 VSCode
 Docker Desktop
+Notepad++
 ```
 
 ### 2. Enable WSL and VMP features on Windows
