@@ -47,10 +47,17 @@ VSCode
 Docker Desktop
 ```
 
-In Windows Powershell, run as Administrator to install WSL and VMP features and then restart Windows:
+### Install WSL and VMP features
+In Windows Powershell, run as Administrator: 
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+### Set WSL2 as default
+In Windows Powershell, run as Administrator:
+```
+wsl --set-default-version 2
 ```
 
 Run these commands in Windows Powershell to install Ubuntu in WSL:
