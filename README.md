@@ -72,7 +72,7 @@ Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBas
 Add-AppxPackage Ubuntu.appx
 ```
 
-### 6. Initial Ubuntu run
+### 6. Install Ubuntu
 Click Ubuntu icon from Windows Start menu and let it configure itself
 
 ### 7. Install packages in Ubuntu
