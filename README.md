@@ -39,6 +39,12 @@ Project Organization
 Set up
 ------------
 
+Install the following apps:
+- Mozzila
+- Git
+- VSCode
+
+
 Run these commands in Windows Powershell to install Ubuntu in WSL:
 
 ```powershell
