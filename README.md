@@ -39,7 +39,7 @@ Project Organization
 Set up
 ------------
 
-### Install apps in Windows
+### 1. Install apps in Windows
 ```
 Mozzila
 Git
@@ -47,28 +47,31 @@ VSCode
 Docker Desktop
 ```
 
-### Enable WSL and VMP features on Windows
+### 2. Enable WSL and VMP features on Windows
 In Windows Powershell, run as Administrator and then **restart Windows**: 
 ```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-### Set WSL2 as default
+### 3. Set WSL2 as default
 In Windows Powershell, run as Administrator:
 ```powershell
 wsl --set-default-version 2
 ```
 
-### Download and install Linux kernel update package:
+### 4. Download and install Linux kernel update package:
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-### Install Ubuntu in WSL
+
+### 5. Install Ubuntu in WSL
 In Windows Powershell, run as Administrator:
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
 Add-AppxPackage Ubuntu.appx
 ```
+
+### 6. Open Ubuntu from Start menu and let it install itself
 
 Run these commands in Ubuntu shell to install Python 3.9, generate SSH keys for GitHub, clone repository and set up VSCode remote server:
 ```bash
