@@ -130,7 +130,7 @@ cd python
 git clone git@github.com:mmlynarik/name-matching.git
 ```
 
-### 15. Launch VSCode
+### 15. Launch VSCode in Ubuntu bash
 ```bash
 code .
 ```
