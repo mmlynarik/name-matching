@@ -49,19 +49,19 @@ Docker Desktop
 
 ### Enable WSL and VMP features on Windows
 In Windows Powershell, run as Administrator and then **restart Windows**: 
-```
+```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 ### Set WSL2 as default
 In Windows Powershell, run as Administrator:
-```
+```powershell
 wsl --set-default-version 2
 ```
 
-Run these commands in Windows Powershell to install Ubuntu in WSL:
-
+### Install Ubuntu in WSL
+In Windows Powershell, run as Administrator:
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
 Add-AppxPackage Ubuntu.appx
