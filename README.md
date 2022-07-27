@@ -121,13 +121,17 @@ ssh-keygen -t rsa -b 4096 -C "name.surname@gmail.com"
 ```bash
 git config --global user.name "Name Surname"
 git config --global user.email "name.surname@gmail.com"
-git clone git@github.com:mmlynarik/name-matching.git
 ```
 
-### 13. Launch VSCode
+### 14. Clone repository (if necessary, set up proxy first)
 ```bash
 mkdir python
 cd python
+git clone git@github.com:mmlynarik/name-matching.git
+```
+
+### 15. Launch VSCode
+```bash
 code .
 ```
 
