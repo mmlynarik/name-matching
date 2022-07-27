@@ -48,13 +48,11 @@ Docker Desktop
 ```
 
 ### Enable WSL and VMP features on Windows
-In Windows Powershell, run as Administrator: 
+In Windows Powershell, run as Administrator and then **restart Windows**: 
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-
-### Restart your computer
 
 ### Set WSL2 as default
 In Windows Powershell, run as Administrator:
