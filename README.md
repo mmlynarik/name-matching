@@ -111,19 +111,26 @@ eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/paradox.omp.json)"
 https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
 ```
 
-mkdir python
-cd python
-
+### 12. Generate SSH keys for use with Github
+```bash
 ssh-keygen -t rsa -b 4096 -C "name.surname@gmail.com"
 # copy SSH public key to your github account
+```
 
+### 13. Set up git name and email 
+```bash
 git config --global user.name "Name Surname"
 git config --global user.email "name.surname@gmail.com"
 git clone git@github.com:mmlynarik/name-matching.git
+```
 
-cd name-matching/
+### 13. Launch VSCode
+```bash
+mkdir python
+cd python
 code .
 ```
+
 
 Define environment variables into `.env` file. Currently, the application requires these environment variables:
 
