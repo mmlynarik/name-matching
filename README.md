@@ -65,7 +65,7 @@ wsl --set-default-version 2
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 
-### 5. Install Ubuntu in WSL
+### 5. Download Ubuntu via web request
 In Windows Powershell, run as Administrator:
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
