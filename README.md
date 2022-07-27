@@ -54,7 +54,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-## Set WSL2 as default
+#### Set WSL2 as default
 In Windows Powershell, run as Administrator:
 ```
 wsl --set-default-version 2
