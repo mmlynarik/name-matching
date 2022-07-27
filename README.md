@@ -43,7 +43,7 @@ Install the following apps:
 - Mozzila
 - Git
 - VSCode
-
+- Docker Desktop
 
 Run these commands in Windows Powershell to install Ubuntu in WSL:
 
