@@ -78,9 +78,6 @@ Click Ubuntu icon from Windows Start menu and let it configure itself
 ### 7. Install packages in Ubuntu
 In Ubuntu shell, run these commands to install Python 3.9, generate SSH keys for GitHub, clone repository and set up VSCode remote server:
 ```bash
-mkdir python
-cd python
-
 sudo apt update
 sudo apt -y upgrade
 
@@ -90,13 +87,32 @@ sudo apt install -y python3.9-dev
 sudo apt install -y python-is-python3
 sudo apt install -y --reinstall build-essential
 sudo apt install -y libgmp-dev portaudio19-dev libssl-dev python3-dev
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3.9 -
+```
 
-# Enter this manually: eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/paradox.omp.json)"
+### 8. Install poetry package manager
+```bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3.9 -
+```
+
+### 9. Set up aliases and environment variables
+```bash
 echo export PATH=\"\$HOME/.poetry/bin:\$PATH\" >> ~/.bashrc
 echo alias cl=clear >> ~/.bashrc
 echo alias jl=\"jupyter lab --no-browser --port 8888 --ip=\'127.0.0.1\' --ContentManager.allow_hidden=True --ServerApp.token=\'\' --ServerApp.password=\'\'\" >> ~/.bashrc
+```
 
+### 10. Enhance CLI colors using `oh-my-posh`:
+```bash
+eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/paradox.omp.json)"
+```
+
+### 11. Install VSCode extension allowing remote development
+```
+https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
+```
+
+mkdir python
+cd python
 
 ssh-keygen -t rsa -b 4096 -C "name.surname@gmail.com"
 # copy SSH public key to your github account
