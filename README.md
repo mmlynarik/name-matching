@@ -47,9 +47,9 @@ VSCode
 Docker Desktop
 ```
 
-Install WSL & Ubuntu:
+In Powershell, run as Administrator:
 ```
-Go to Settings -> Apps -> Programs and Features (Related Settings on the right) -> Turn Windows features on & off
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
 Run these commands in Windows Powershell to install Ubuntu in WSL:
